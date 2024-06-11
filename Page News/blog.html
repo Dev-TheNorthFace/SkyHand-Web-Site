@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="North">
+<title>Erreur - SkyHand</title>
+<link rel="icon" type="image/png" href="https://skyhand.fr/blog" />
+<meta name="title" content="Erreur - SkyHand">
+<meta property="og:title" content="Erreur - SkyHand">
+<meta name="description" content="SkyHand - Meilleur Serveur Skyblock français, 1.8 à 1.20.x">
+<meta property="og:description" content="SkyHand - Meilleur Serveur Skyblock français, 1.8 à 1.20.x">
+<meta property="og:image" content="http://skyhand.fr/blog">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" /> <link rel="stylesheet" type="text/css" href="/theme/SkyHand/css/style.css" /> <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" /> <script type="5d57a142804e355d7881c10b-text/javascript" src="/js/jquery-1.11.0.js"></script> <script type="5d57a142804e355d7881c10b-text/javascript" src="/js/easy_paginate.js"></script>
+</head>
+<body>
+<div class="load">
+<img src="/theme/SkyHand/img/icon_128.png">
+</div>
+
+<div class="header">
+<div class="filter"></div>
+<div align="center" class="ham">
+<li><i id="toggle" class="fa fa-bars"></i></li>
+</div>
+<div class="nav-bar">
+<li class="left">
+<a class="navlink dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Boutique</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="/shop">Boutique</a>
+<a class="dropdown-item" href="/code">Code Cadeau</a>
+</div>
+</li>
+<li class="left"><a class="navlink" href="/vote">Voter</a></li>
+<a href="/"><img src="/theme/SkyHand/img/icon_256.png" width="64px" alt="Icon SkyHand"></a>
+<li class="right"><a class="navlink" href="/blog">SHNews</a></li>
+<li class="right">
+<a class="navlink dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Autres</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="/p/reglement">Règlement</a>
+<a class="dropdown-item" href="/cps">Testez vos CPS</a>
+<a class="dropdown-item" href="/staff">Le Staff</a>
+<a class="dropdown-item" href="/sanctions">Sanctions</a>
+<a class="dropdown-item" href="/support">Support en ligne</a>
+</div>
+</li>
+<li class="usrnav"><a class="navlink" href="/login">Connexion</a></li>
+<li class="usrnav"><a class="navlink" href="/register">Inscription</a></li>
+</div>
+<div class="user" align="center">
+<li><a class="navlink" href="/login">Connexion</a></li>
+<li><a class="navlink" href="/register">Inscription</a></li>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-4" align="center">
+<a class="disclink" href="https://discordapp.com/invite/JHtPqwV" target="blank">
+<i class="fa fa-discord"><div class="discordcount">0</div></i>
+<h3>Notre Discord</h3>
+<span>Clique pour rejoindre</span>
+</a>
+</div>
+<div class="col-md-4" align="center">
+<a href="/"><img src="/theme/SkyHand/img/logo_720.png" width="360" alt="Logo SkyHand" class="logo"></a>
+</div>
+<div class="col-md-4" align="center">
+<div class="pointer" onclick="if (!window.__cfRLUnblockHandlers) return false; copyToClipboard('#ip')" data-cf-modified-5d57a142804e355d7881c10b->
+<i class="fa fa-copy"><div class="playercount">0</div></i>
+<h3 id="ip">play.skyhand.fr</h3>
+<span id="copy">Clique pour copier l'IP</span>
+</div>
+</div>
+</div>
+</div>
+<div id="content">
+<a href="#content"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+</div>
+<div class="overlay"></div>
+</div>
+<script type="5d57a142804e355d7881c10b-text/javascript" async defer>
+$('#toggle').click(function(){
+    if($(".nav-bar").attr('id') == "active")
+      $(".nav-bar").removeAttr('id');
+    else
+      $(".nav-bar").attr('id', 'active');
+});
+
+async function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $('#copy').text("Adresse ip copiée");
+  setTimeout(function (){
+    $('#copy').text("Clique pour copier");
+  }, 3000);
+}
+
+$.get('https://mcapi.us/server/status?ip=play.skyhand.fr', function(a){
+  $('.playercount').html(a.players.now);
+});
+
+$.get('https://discord.com/api/guilds/266313038389313537/widget.json', function(b){
+  $('.discordcount').html(b.presence_count);
+});
+</script>
+<div class="container" align="center">
+<h1>Articles</h1>
+</div>
+<div class="container">
+<div class="row blog">
+<a href="/blog/PN-10Juil">
+<div class="col-md-4">
+<img style="width: 100%" src="/img/articles/wsy1f5.png">
+</div>
+<div class="col-md-8">
+<h1>Patch-Note • 10 Juillet</h1>
+<p><p></p>
+<p style="text-align: center;">Patch-Note&nbsp;&bull ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/repost-trailer-rubisV2">
+<div class="col-md-4">
+<img style="width: 100%" src="/img/articles/4nsc12.png">
+</div>
+<div class="col-md-8">
+<h1>[TUTO] Repost Trail RubisV2</h1>
+<p><p></p>
+<p style="text-align: center;">REPOST TRAILER RUBISV ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/invitation-discord">
+<div class="col-md-4">
+<img style="width: 100%" src="/img/articles/guhkp9.png">
+</div>
+<div class="col-md-8">
+<h1>[TUTO] Invitation Discord</h1>
+<p><p></p>
+<p style="text-align: center;">Comment inviter des j ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/topvote-mai">
+<div class="col-md-4">
+<img style="width: 100%" src="/img/articles/06n4us.png">
+</div>
+<div class="col-md-8">
+<h1>TopVote Mai</h1>
+<p><p></p>
+<p style="text-align: center;">TopVote de Mai :</p>
+...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/topvote-avril">
+<div class="col-md-4">
+<img style="width: 100%" src="/img/articles/06n4us.png">
+</div>
+<div class="col-md-8">
+<h1>TopVote Avril</h1>
+<p><p></p>
+<p style="text-align: center;">TopVote d'Avril :</p> ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/PN-1Mai">
+<div class="col-md-4">
+<img style="width: 100%" src="/img/articles/l2tq7t.png">
+</div>
+<div class="col-md-8">
+<h1>Patch-Note • 1er Mai</h1>
+<p><p></p>
+<p style="text-align: center;">Patch-Note&nbsp;&bull ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/sug-avr22">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/bx26rh.png">
+</div>
+<div class="col-md-8">
+<h1>Suggestions • Avril</h1>
+<p><p></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style=" ...</p>
+                </div>
+            </a>
+        </div>
+            <div class=" row blog">
+<a href="/blog/PN-15Avr">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/g52vpi.png">
+</div>
+<div class="col-md-8">
+<h1>Patch-Note • 15 Avril</h1>
+<p><p></p>
+<p style="text-align: center;">Patch-Note&nbsp;&bull ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/paques-2022">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/aparid.png">
+</div>
+<div class="col-md-8">
+<h1>Pâques sur SkyHand</h1>
+<p><p></p>
+<p style="text-align: center;">P&acirc;ques sur SkyH ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/PN-10Avr">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/fd0cj9.png">
+</div>
+<div class="col-md-8">
+<h1>Patch-Note • 10 Avril</h1>
+<p><p></p>
+<p style="text-align: center;">Patch-Note</p>
+<p sty ...< p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/topvote-mars">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/06n4us.png">
+</div>
+<div class="col-md-8">
+<h1>TopVote Mars</h1>
+<p><p></p>
+<p style="text-align: center;">TopVote de Mars :</p> ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/minievent">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/yf7upy.png">
+</div>
+<div class="col-md-8">
+<h1>Mini-Event</h1>
+<p><p></p>
+<p style="text-align: center;">Mise &agrave; jour Mi ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/ga-petslime">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/szeag5.png">
+</div>
+<div class="col-md-8">
+<h1>Giveaway Discord</h1>
+<p><p></p>
+<p style="text-align: center;">GIVEAWAY DISCORD</p>
+...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/topvote-fevrier">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/06n4us.png">
+</div>
+<div class="col-md-8">
+<h1>TopVote Février</h1>
+<p><p></p>
+<p style="text-align: center;">TopVote de F&eacute;v ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/maj-cosm-lobby">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/92xrvq.png">
+</div>
+<div class="col-md-8">
+<h1>Mise à jour Cosmétique - Lobby</h1>
+<p><p style="text-align: center;">Mise &agrave; jour Cosm&eacut ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/SHNEWS-de-retour">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/c3rqus.png">
+</div>
+<div class="col-md-8">
+<h1>Le retour des SHNews</h1>
+<p><p></p>
+<p style="text-align: center;">Les SHNews sont de re ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/Noel-2021">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/06tyx1.png">
+</div>
+<div class="col-md-8">
+<h1>Noël sur SkyHand</h1>
+<p><p style="text-align: center;"></p>
+<p style="text-align: ce ...</p>
+                </div>
+            </a>
+        </div>
+            <div class=" row blog">
+<a href="/blog/SHNEWS-Decembre">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/c3rqus.png">
+</div>
+<div class="col-md-8">
+<h1>SHNews - Décembre</h1>
+<p><p></p>
+<p style="text-align: center;">Bienvenue &agrave; to ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/devenir-staff">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/up8kbs.png">
+</div>
+<div class="col-md-8">
+<h1>Recrutement Guide</h1>
+<p><p></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style=" ...</p>
+                </div>
+            </a>
+        </div>
+            <div class=" row blog">
+<a href="/blog/SHNEWS-Novembre">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/c3rqus.png">
+</div>
+<div class="col-md-8">
+<h1>SHNews - Novembre</h1>
+<p><p></p>
+<p style="text-align: center;">Bienvenue &agrave; to ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/Halloween21">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/alhy7y.png">
+</div>
+<div class="col-md-8">
+<h1>Halloween sur SkyHand</h1>
+<p><p></p>
+<p style="text-align: center;">Halloween sur SkyHand ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/PN-23Oct">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/jxhhl7.png">
+</div>
+<div class="col-md-8">
+<h1>Patch-Note - 23 Octobre</h1>
+<p><p></p>
+<p style="text-align: center;">Patch-Note du 23 Octo ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/PN-14Oct">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/wbf219.png">
+</div>
+<div class="col-md-8">
+<h1>Patch-Note - 14 Octobre</h1>
+<p><p></p>
+<p style="text-align: center;">Patch-Note du 14 Octo ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/SHNEWS-Octobre">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/c3rqus.png">
+</div>
+<div class="col-md-8">
+<h1>SHNews - Octobre</h1>
+<p><p></p>
+<p style="text-align: center;">Bienvenue &agrave; to ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/Tutoriel-CB">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/guhkp9.png">
+</div>
+<div class="col-md-8">
+<h1>[TUTO] Payer via CB sur SkyHand</h1>
+<p><p style="text-align: center;" data-xf-p="1"></p>
+<p style=" ...</p>
+                </div>
+            </a>
+        </div>
+            <div class=" row blog">
+<a href="/blog/Tutoriel-Changer-Pseudo-Minecraft">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/s8xppw.png">
+</div>
+<div class="col-md-8">
+<h1>[TUTO] Changer de pseudo sur SH</h1>
+<p><p style="text-align: center;" data-xf-p="1"></p>
+<p style=" ...</p>
+                </div>
+            </a>
+        </div>
+            <div class=" row blog">
+<a href="/blog/Tutoriel-PaySafeCard">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/guhkp9.png">
+</div>
+<div class="col-md-8">
+<h1>[TUTO] Utiliser PaySafeCard sur SH</h1>
+<p><p style="text-align: center;"></p>
+<p style="text-align: ce ...</p>
+                </div>
+            </a>
+        </div>
+            <div class=" row blog">
+<a href="/blog/Tutoriel-Voter-Pour-SkyHand">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/6edhie.png">
+</div>
+<div class="col-md-8">
+<h1>[TUTO] Voter sur SkyHand</h1>
+<p><p style="text-align: center;" data-xf-p="1"></p>
+<p style=" ...</p>
+                </div>
+            </a>
+        </div>
+            <div class=" row blog">
+<a href="/blog/BetaTesteur-Votex2">
+<div class="col-md-4">
+<img style="width: 100%" src="https://i.goopics.net/yr765i.png">
+</div>
+<div class="col-md-8">
+<h1>Bêta-Testeur & Vote Double</h1>
+<p><p style="text-align: center;"></p>
+<p>&nbsp;</p>
+<p>Nous re ...</p>
+</div>
+</a>
+</div>
+<div class="row blog">
+<a href="/blog/SHNEWS-Presentation">
+<div class="col-md-4">
+<img style="width: 100%" src="https://skyhand.fr/img/SHNews200x200.webp">
+</div>
+<div class="col-md-8">
+<h1>SHNews - Présentation</h1>
+<p><p></p>
+<p style="text-align: center;">Bienvenue &agrave; to ...</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<div class="row footer">
+<div class="col-md-3 footer-links">
+<h4><i class="fa fa-info-circle" aria-hidden="true"></i> Partenaires</h4>
+<a href="https://serveurs-minecraft.org">> serveurs-minecraft.org</a>
+</div>
+<div class="col-md-3 footer-links">
+<h4><i class="fa fa-link" aria-hidden="true"></i> Liens utiles</h4>
+<a href="/p/Règlement">> Règlement</a>
+<a href="/p/CGU-CGV">> CGU / CGV</a>
+<a href="https://discordapp.com/invite/JHtPqwV">> Support</a>
+<a href="/shop">> boutique</a>
+</div>
+<div class="col-md-3">
+<h4><i class="fa fa-trophy" aria-hidden="true"></i> Top voteurs</h4>
+<div class="player-info">
+<div class="title-votes">
+
+<img src="https://minotar.net/helm/luluca_64/32.png" class="img-rounded" alt width="32" height="32" async defer>
+</div>
+<div class="votes"><strong class="player-name" style="text-transform: uppercase">luluca_64</strong><br>
+260 votes</div>
+</div>
+<div class="player-info">
+<div class="title-votes">
+
+<img src="https://minotar.net/helm/conconb_/32.png" class="img-rounded" alt width="32" height="32" async defer>
+</div>
+<div class="votes"><strong class="player-name" style="text-transform: uppercase">conconb_</strong><br>
+163 votes</div>
+</div>
+<div class="player-info">
+<div class="title-votes">
+
+<img src="https://minotar.net/helm/enzoletuc/32.png" class="img-rounded" alt width="32" height="32" async defer>
+</div>
+<div class="votes"><strong class="player-name" style="text-transform: uppercase">enzoletuc</strong><br>
+159 votes</div>
+</div>
+</div>
+<div class="col-md-3">
+<h4><i class="fa fa-shopping-cart" aria-hidden="true"></i> Boutique</h4>
+<a class="btnshop" href="/shop">Visiter notre boutique</a>
+</div>
+</div>
+</div>
+<div class="container grey" align="center">
+Copyright © 2021 <a href="/">SkyHand</a> - Tout droit réservé | Thème développé par <a href="https://willax-dev.eu" target="blank">Antoinecoll2807</a> - Propulsé par Mineweb.
+</div>
+</footer>
+<script type="5d57a142804e355d7881c10b-text/javascript" async defer>
+        $(window).load(function() { $(".load").fadeOut(); });
+
+        if($(window).scrollTop() > 50) $(".nav-bar").addClass("nav-scroll");
+        $(window).scroll(function (event) {
+            if($(window).scrollTop() > 50){ 
+                $(".nav-bar").addClass("nav-scroll");
+            }else{
+                $(".nav-bar").removeClass("nav-scroll");
+
+            }
+        });
+        function fscroll(){
+            document.getElementById('content').scrollIntoView({
+              behavior: 'smooth'
+            });
+        }
+    </script>
+<script type="5d57a142804e355d7881c10b-text/javascript">
+            window.onload = fscroll;
+        </script>
+
+
+<div class="modal modal-medium fade" id="lostpasswd" tabindex="-1" role="dialog" aria-labelledby="lostpasswdLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
+<h4 class="modal-title" id="myModalLabel">Vous avez oublié votre mot de passe ?</h4>
+</div>
+<form method="POST" data-ajax="true" action="/user/ajax_lostpasswd">
+<div class="modal-body">
+<div class="ajax-msg"></div>
+<div class="form-group">
+<h5>Email </h5>
+<input type="text" class="form-control" name="email" placeholder="Entrez votre adresse email">
+</div>
+</div>
+<div class="modal-footer">
+<button type="submit" class="btn btn-primary btn-block">Envoyer l'email</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<script type="5d57a142804e355d7881c10b-text/javascript">
+    $(document).ready(function () {
+            });
+</script> -->
+<script type="5d57a142804e355d7881c10b-text/javascript" src="/js/bootstrap.min.js"></script> <script type="5d57a142804e355d7881c10b-text/javascript" src="/js/app.js"></script> <script type="5d57a142804e355d7881c10b-text/javascript" src="/js/form.js"></script> <script type="5d57a142804e355d7881c10b-text/javascript" src="/js/notification.js"></script>
+<script type="5d57a142804e355d7881c10b-text/javascript">
+        // Config FORM/APP.JS
+
+    var LIKE_URL = "/news/like";
+    var DISLIKE_URL = "/news/dislike";
+
+    var LOADING_MSG = "Chargement";
+    var ERROR_MSG = "Erreur";
+    var INTERNAL_ERROR_MSG = "Erreur interne, veuillez réessayer";
+    var FORBIDDEN_ERROR_MSG = "Accès interdit"
+    var SUCCESS_MSG = "Succès";
+
+    var CSRF_TOKEN = "91fa577bd065a1fd21987d98fdc13ebc0ceb482004597037d8b9f7823221423fba8a8c4db6d23f9b79d5e3dbabc28d4d367322c3dc9d6def9b98871bd1409b3d";
+    </script>
+<script type="5d57a142804e355d7881c10b-text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-89807075-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5d57a142804e355d7881c10b-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"854ee800ac7639ff","r":1,"version":"2024.2.0","token":"76a9edd02b234d3fb0954afc9a9598e7"}' crossorigin="anonymous"></script>
+</body>
+</html>

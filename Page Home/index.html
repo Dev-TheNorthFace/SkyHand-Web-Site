@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="North">
+<title>Accueil - SkyHand</title>
+<link rel="icon" type="image/png" href="https://skyhand.fr/" />
+<meta name="title" content="Accueil - SkyHand">
+<meta property="og:title" content="Accueil - SkyHand">
+<meta name="description" content="SkyHand - Meilleur Serveur Skyblock français, 1.8 à 1.20.x">
+<meta property="og:description" content="SkyHand - Meilleur Serveur Skyblock français, 1.8 à 1.20.x">
+<meta property="og:image" content="http://skyhand.fr/">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" /> <link rel="stylesheet" type="text/css" href="/theme/SkyHand/css/style.css" /> <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" /> <script type="2c5dab81785fb11aa89d25e5-text/javascript" src="/js/jquery-1.11.0.js"></script> <script type="2c5dab81785fb11aa89d25e5-text/javascript" src="/js/easy_paginate.js"></script>
+</head>
+<body>
+<div class="load">
+<img src="/theme/SkyHand/img/icon_128.png">
+</div>
+
+<div class="header">
+<div class="filter"></div>
+<div align="center" class="ham">
+<li><i id="toggle" class="fa fa-bars"></i></li>
+</div>
+<div class="nav-bar">
+<li class="left">
+<a class="navlink dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Boutique</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="/shop">Boutique</a>
+<a class="dropdown-item" href="/code">Code Cadeau</a>
+</div>
+</li>
+<li class="left"><a class="navlink" href="/vote">Voter</a></li>
+<a href="/"><img src="/theme/SkyHand/img/icon_256.png" width="64px" alt="Icon SkyHand"></a>
+<li class="right"><a class="navlink" href="/blog">SHNews</a></li>
+<li class="right">
+<a class="navlink dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Autres</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="/p/reglement">Règlement</a>
+<a class="dropdown-item" href="/cps">Testez vos CPS</a>
+<a class="dropdown-item" href="/staff">Le Staff</a>
+<a class="dropdown-item" href="/sanctions">Sanctions</a>
+<a class="dropdown-item" href="/support">Support en ligne</a>
+</div>
+</li>
+<li class="usrnav"><a class="navlink" href="/login">Connexion</a></li>
+<li class="usrnav"><a class="navlink" href="/register">Inscription</a></li>
+</div>
+<div class="user" align="center">
+<li><a class="navlink" href="/login">Connexion</a></li>
+<li><a class="navlink" href="/register">Inscription</a></li>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-4" align="center">
+<a class="disclink" href="https://discordapp.com/invite/JHtPqwV" target="blank">
+<i class="fa fa-discord"><div class="discordcount">0</div></i>
+<h3>Notre Discord</h3>
+<span>Clique pour rejoindre</span>
+</a>
+</div>
+<div class="col-md-4" align="center">
+<a href="/"><img src="/theme/SkyHand/img/logo_720.png" width="360" alt="Logo SkyHand" class="logo"></a>
+</div>
+<div class="col-md-4" align="center">
+<div class="pointer" onclick="if (!window.__cfRLUnblockHandlers) return false; copyToClipboard('#ip')" data-cf-modified-2c5dab81785fb11aa89d25e5->
+<i class="fa fa-copy"><div class="playercount">0</div></i>
+<h3 id="ip">play.skyhand.fr</h3>
+<span id="copy">Clique pour copier l'IP</span>
+</div>
+</div>
+</div>
+</div>
+<div id="content">
+<a href="#content"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+</div>
+<div class="overlay"></div>
+</div>
+<script type="2c5dab81785fb11aa89d25e5-text/javascript" async defer>
+$('#toggle').click(function(){
+    if($(".nav-bar").attr('id') == "active")
+      $(".nav-bar").removeAttr('id');
+    else
+      $(".nav-bar").attr('id', 'active');
+});
+
+async function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $('#copy').text("Adresse ip copiée");
+  setTimeout(function (){
+    $('#copy').text("Clique pour copier");
+  }, 3000);
+}
+
+$.get('https://mcapi.us/server/status?ip=play.skyhand.fr', function(a){
+  $('.playercount').html(a.players.now);
+});
+
+$.get('https://discord.com/api/guilds/266313038389313537/widget.json', function(b){
+  $('.discordcount').html(b.presence_count);
+});
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment ajouter un serveur Minecraft ?","acceptedAnswer":{"@type":"Answer","text":"Sur la page Multijoueur de votre launcher, cliquez sur Nouveau serveur et ajoutez les informations du serveur que vous voulez ajouter."}},{"@type":"Question","name":"Comment rejoindre le serveur Minecraft SkyHand","acceptedAnswer":{"@type":"Answer","text":"Sur la page Multijoueur de votre launcher Minecraft, cliquez sur Nouveau serveur et ajoutez les informations suivantes dans la case Adresse du serveur: <b>PLAY.SKYHAND.FR"}},{"@type":"Question","name":"Quelle version de Minecraft est compatible sur SkyHand","acceptedAnswer":{"@type":"Answer","text":"Le serveur Minecraft SkyHand supporte toutes les versions de Minecraft de la 1.8 � la 1.20. Attention cependant, leur SkyBlock RubisV2 ne supporte que de la 1.16 � la 1.20"}}]}</script><div class="container home">
+<div class="row">
+<center><h1>Nos SkyBlocks</h1></center>
+<div class="col-md-6 fadeIn">
+<div align="center"><img src="https://skyhand.fr/img/obsidienne.webp" width="190" loading="lazy" alt="Icon SkyBlock Obsidienne"></div>
+<center><h1>SkyBlock Obsidienne</h1>
+<p>Une économie unique, un gameplay encore jamais vu</p></center>
+</div>
+<div class="col-md-6 fadeIn">
+<div align="center"><img src="https://skyhand.fr/img/rubis.webp" width="190" loading="lazy" alt="Icon SkyBlock RubisV2"></div>
+<center><h1>SkyBlock RubisV2</h1>
+<p>Un SkyBlock OP, une économie basé sur les spawners</p></center>
+</div>
+</div>
+</div>
+<div class="bgimg" align="center">
+<div class="filter"></div>
+<div class="container">
+<h3>Acheter des articles sur la boutique pour nous aider à développer le serveur.</h3>
+</div>
+</div>
+<div class="container home" align="center">
+<h1>Articles</h1>
+<ul class="articlesUl">
+<li class="col-md-4 fadeIn card" align="left">
+<a href="/blog/PN-10Juil">
+<img src="/img/articles/wsy1f5.png" loading="lazy" alt="Patch-Note • 10 Juillet" defer>
+<div class="group">
+<div class="p-3">
+<h4>Patch-Note • 10 Juillet</h4>
+</div>
+<div class="p-3">
+<button id="41" type="button" class="btn btn-primary disabled">2 <i class="fa fa-thumbs-up"></i></button>
+</div>
+</div>
+</a>
+</li>
+<li class="col-md-4 fadeIn card" align="left">
+<a href="/blog/repost-trailer-rubisV2">
+<img src="/img/articles/4nsc12.png" loading="lazy" alt="[TUTO] Repost Trail RubisV2" defer>
+<div class="group">
+<div class="p-3">
+<h4>[TUTO] Repost Trail RubisV2</h4>
+</div>
+<div class="p-3">
+<button id="40" type="button" class="btn btn-primary disabled">1 <i class="fa fa-thumbs-up"></i></button>
+</div>
+</div>
+</a>
+</li>
+<li class="col-md-4 fadeIn card" align="left">
+<a href="/blog/invitation-discord">
+<img src="/img/articles/guhkp9.png" loading="lazy" alt="[TUTO] Invitation Discord" defer>
+<div class="group">
+<div class="p-3">
+<h4>[TUTO] Invitation Discord</h4>
+</div>
+<div class="p-3">
+<button id="38" type="button" class="btn btn-primary disabled">0 <i class="fa fa-thumbs-up"></i></button>
+</div>
+</div>
+</a>
+</li>
+<li class="col-md-4 fadeIn card" align="left">
+<a href="/blog/topvote-mai">
+<img src="/img/articles/06n4us.png" loading="lazy" alt="TopVote Mai" defer>
+<div class="group">
+<div class="p-3">
+<h4>TopVote Mai</h4>
+</div>
+<div class="p-3">
+<button id="37" type="button" class="btn btn-primary disabled">1 <i class="fa fa-thumbs-up"></i></button>
+</div>
+</div>
+</a>
+</li>
+<li class="col-md-4 fadeIn card" align="left">
+<a href="/blog/topvote-avril">
+<img src="/img/articles/06n4us.png" loading="lazy" alt="TopVote Avril" defer>
+<div class="group">
+<div class="p-3">
+<h4>TopVote Avril</h4>
+</div>
+<div class="p-3">
+<button id="36" type="button" class="btn btn-primary disabled">5 <i class="fa fa-thumbs-up"></i></button>
+</div>
+</div>
+</a>
+</li>
+<li class="col-md-4 fadeIn card" align="left">
+<a href="/blog/PN-1Mai">
+<img src="/img/articles/l2tq7t.png" loading="lazy" alt="Patch-Note • 1er Mai" defer>
+<div class="group">
+<div class="p-3">
+<h4>Patch-Note • 1er Mai</h4>
+</div>
+<div class="p-3">
+<button id="35" type="button" class="btn btn-primary disabled">2 <i class="fa fa-thumbs-up"></i></button>
+</div>
+</div>
+</a>
+</li>
+</ul>
+<ol id="pagination"></ol>
+</div>
+<a href="/blog" class="btnnews">Voir plus</a>
+</div>
+
+<footer>
+<div class="container">
+<div class="row footer">
+<div class="col-md-3 footer-links">
+<h4><i class="fa fa-info-circle" aria-hidden="true"></i> Partenaires</h4>
+<a href="https://serveurs-minecraft.org">> serveurs-minecraft.org</a>
+</div>
+<div class="col-md-3 footer-links">
+<h4><i class="fa fa-link" aria-hidden="true"></i> Liens utiles</h4>
+<a href="/p/Règlement">> Règlement</a>
+<a href="/p/CGU-CGV">> CGU / CGV</a>
+<a href="https://discordapp.com/invite/JHtPqwV">> Support</a>
+<a href="/shop">> boutique</a>
+</div>
+<div class="col-md-3">
+<h4><i class="fa fa-trophy" aria-hidden="true"></i> Top voteurs</h4>
+<div class="player-info">
+<div class="title-votes">
+
+<img src="https://minotar.net/helm/luluca_64/32.png" class="img-rounded" alt width="32" height="32" async defer>
+</div>
+<div class="votes"><strong class="player-name" style="text-transform: uppercase">luluca_64</strong><br>
+260 votes</div>
+</div>
+<div class="player-info">
+<div class="title-votes">
+
+<img src="https://minotar.net/helm/conconb_/32.png" class="img-rounded" alt width="32" height="32" async defer>
+</div>
+<div class="votes"><strong class="player-name" style="text-transform: uppercase">conconb_</strong><br>
+163 votes</div>
+</div>
+<div class="player-info">
+<div class="title-votes">
+
+<img src="https://minotar.net/helm/enzoletuc/32.png" class="img-rounded" alt width="32" height="32" async defer>
+</div>
+<div class="votes"><strong class="player-name" style="text-transform: uppercase">enzoletuc</strong><br>
+159 votes</div>
+</div>
+</div>
+<div class="col-md-3">
+<h4><i class="fa fa-shopping-cart" aria-hidden="true"></i> Boutique</h4>
+<a class="btnshop" href="/shop">Visiter notre boutique</a>
+</div>
+</div>
+</div>
+<div class="container grey" align="center">
+Copyright © 2021 <a href="/">SkyHand</a> - Tout droit réservé | Thème développé par <a href="https://willax-dev.eu" target="blank">Antoinecoll2807</a> - Propulsé par Mineweb.
+</div>
+</footer>
+<script type="2c5dab81785fb11aa89d25e5-text/javascript" async defer>
+        $(window).load(function() { $(".load").fadeOut(); });
+
+        if($(window).scrollTop() > 50) $(".nav-bar").addClass("nav-scroll");
+        $(window).scroll(function (event) {
+            if($(window).scrollTop() > 50){ 
+                $(".nav-bar").addClass("nav-scroll");
+            }else{
+                $(".nav-bar").removeClass("nav-scroll");
+
+            }
+        });
+        function fscroll(){
+            document.getElementById('content').scrollIntoView({
+              behavior: 'smooth'
+            });
+        }
+    </script>
+
+
+<div class="modal modal-medium fade" id="lostpasswd" tabindex="-1" role="dialog" aria-labelledby="lostpasswdLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fermer</span></button>
+<h4 class="modal-title" id="myModalLabel">Vous avez oublié votre mot de passe ?</h4>
+</div>
+<form method="POST" data-ajax="true" action="/user/ajax_lostpasswd">
+<div class="modal-body">
+<div class="ajax-msg"></div>
+<div class="form-group">
+<h5>Email </h5>
+<input type="text" class="form-control" name="email" placeholder="Entrez votre adresse email">
+</div>
+</div>
+<div class="modal-footer">
+<button type="submit" class="btn btn-primary btn-block">Envoyer l'email</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<script type="2c5dab81785fb11aa89d25e5-text/javascript">
+    $(document).ready(function () {
+            });
+</script> -->
+<script type="2c5dab81785fb11aa89d25e5-text/javascript" src="/js/bootstrap.min.js"></script> <script type="2c5dab81785fb11aa89d25e5-text/javascript" src="/js/app.js"></script> <script type="2c5dab81785fb11aa89d25e5-text/javascript" src="/js/form.js"></script> <script type="2c5dab81785fb11aa89d25e5-text/javascript" src="/js/notification.js"></script>
+<script type="2c5dab81785fb11aa89d25e5-text/javascript">
+        // Config FORM/APP.JS
+
+    var LIKE_URL = "/news/like";
+    var DISLIKE_URL = "/news/dislike";
+
+    var LOADING_MSG = "Chargement";
+    var ERROR_MSG = "Erreur";
+    var INTERNAL_ERROR_MSG = "Erreur interne, veuillez réessayer";
+    var FORBIDDEN_ERROR_MSG = "Accès interdit"
+    var SUCCESS_MSG = "Succès";
+
+    var CSRF_TOKEN = "94ee4a71463ec847ea44ad82afa89aad79e50a0429cac404adccbdc4d73d69104df5ee4c54216351b9c30f2af78f79507a383fcb84e6c967239f8d2996b13122";
+    </script>
+<script type="2c5dab81785fb11aa89d25e5-text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-89807075-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2c5dab81785fb11aa89d25e5-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"854e78adfdbd36c8","r":1,"version":"2024.2.0","token":"76a9edd02b234d3fb0954afc9a9598e7"}' crossorigin="anonymous"></script>
+</body>
+</html>
